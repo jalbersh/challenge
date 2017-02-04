@@ -1,45 +1,17 @@
-# Rna Transcription
+Dish Coding Challenge - Feb 1, 2017
 
-Write a program that, given a DNA strand, returns its RNA complement (per RNA transcription).
+Implement a credit card number validation microservice using Luhn's
+algorithm (a.k.a Mod 10). It shall handle all 4 credit card types
+(Visa, MAsterCard, Americal Express, and Discover). AE card numbers
+are 15 digits and the rest ar 16 digits.
 
-Both DNA and RNA strands are a sequence of nucleotides.
+Luhn's Algorithm:
 
-The four nucleotides found in DNA are adenine (**A**), cytosine (**C**),
-guanine (**G**) and thymine (**T**).
+1. From the rightmost digit, which is the check digit, moving left,
+double the value of every digit. If the product of this doubling is
+greater than 9 (7*2=14), then sum the digits of the product. For example,
+10: 1+0=1, 14: 1+5=5).
 
-The four nucleotides found in RNA are adenine (**A**), cytosine (**C**),
-guanine (**G**) and uracil (**U**).
-
-Given a DNA strand, its transcribed RNA strand is formed by replacing
-each nucleotide with its complement:
-
-* `G` -> `C`
-* `C` -> `G`
-* `T` -> `A`
-* `A` -> `U`
-
-## Setup
-
-Go through the setup instructions for JavaScript to
-install the necessary dependencies:
-
-http://exercism.io/languages/javascript
-
-## Making the Test Suite Pass
-
-Execute the tests with:
-
-    jasmine-node .
-
-In many test suites all but the first test have been skipped.
-
-Once you get a test passing, you can unskip the next one by
-changing `xit` to `it`.
-
-## Source
-
-Rosalind [http://rosalind.info/problems/rna](http://rosalind.info/problems/rna)
-
-## Submitting Incomplete Problems
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
-
+2. Take the sum of all the digits
+3. If the total modulo 10 of the sum is equal to 0, then the number is
+valid, else it is not valid.

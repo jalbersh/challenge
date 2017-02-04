@@ -31,9 +31,10 @@ describe('check luhns account number', function() {
     expect(luhns.validate('4485286853676868')).toEqual(false);
   });
 
-  // xit('invalid card', function() {
-  //   expect(luhns.validate('448528T853676868')).toThrow(new Error('Not a digit'));
-  // });
+   it('invalid card containing letter', function() {
+     expect(luhns.validate('448528T853676868')).toThrow
+            (new Error('Not a digit'));
+   });
 
   it('invalid card', function() {
     expect(luhns.validate('6111604555006546')).toEqual(false);

@@ -11,6 +11,11 @@
             <option value="$PROJECT_DIR$/JWA_Challange" />
           </set>
         </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$/JWA_Challange" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
